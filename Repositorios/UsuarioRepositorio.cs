@@ -26,7 +26,7 @@ namespace SistemaDeTarefas.Repositorios
         {
             UsuarioModel usuarioPorId = await BuscarPorId(id);
 
-            if (usuarioPorId != null)
+            if (usuarioPorId == null)
             {
                 throw new Exception($"Usuário para o ID: {id} não foi encontrado no banco de dados.");
             }
@@ -39,7 +39,7 @@ namespace SistemaDeTarefas.Repositorios
         {
             UsuarioModel usuarioPorId = await BuscarPorId(id);
 
-            if(usuarioPorId != null)
+            if(usuarioPorId == null)
             {
                 throw new Exception($"Usuário para o ID: {id} não foi encontrado no banco de dados.");
             }
